@@ -1,36 +1,88 @@
 package com.example.coroutines.testcoroutine.flow
 
-import kotlinx.coroutines.*
+import kotlinx.coroutines.InternalCoroutinesApi
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
+
 
 /**
-### 15、协程的上下文
-        CoroutineContext是一组用于定义协程行为的元素，他由如下几个元素构成：
-        1、Job：控制协程的生命周期。
-        2、CoroutineDispatcher：向合适的线程分发任务。
-        3、CoroutineName：协程的名称，调试的时候用到。
-        4、CoroutineExceptionHandler：处理未被捕捉的异常。
+  Flow
  */
 
 fun main() {
-   // testCoroutineContext()
-    testCoroutineContextExtend()
+    testReturnMultipleValue()
 }
 
+/**
+ * 挂起函数可以异步的返回单个值，但是该如何异步的返回多个值呢？
+异步返回多个值的方案：
+1、集合
+2、序列
+3、挂起函數
+4、Flow
+ */
+fun testReturnMultipleValue() {
+   // testSimpleList().forEach { value-> println(value) }
+    //simpleSeqence().forEach { value-> println(value) }
+    //testMultipleValue()
+    testSimpleFlow()
+}
 
-fun testCoroutineContextExtend() = runBlocking {
-    val scope:CoroutineScope= CoroutineScope(Job() + Dispatchers.IO +CoroutineName("testExtend"))
-    val job= scope.launch(Dispatchers.Default + CoroutineName("xxxCoroutine")) {
-        //通过scope.launch创建的协程会将scope:CoroutineScope作为父级
-        //[ Job ]中括号为get重载操作符
-        println("job= ${coroutineContext [ Job ]} thread= ${Thread.currentThread().name}")
-        val result=async {
-           //通过async创建的协程会将当前协程作为父级
-            println("job= ${coroutineContext [ Job ]} thread= ${Thread.currentThread().name}")
-            "666"
-        }.await()
+//1、集合
+fun testSimpleList():List<Int> = listOf(1,2,3,4,5,6)
+
+//2、序列
+//返回了多个值，是同步
+fun simpleSeqence():Sequence<Int> = sequence<Int> {
+    for (i in 1..6){
+        //阻塞
+      //  Thread.sleep(1000)
+        //不能使用外部的挂起函数，引入后面的Flow
+       // delay(1000)
+        //yield为Sequence内部提供的挂起函数
+        yield(i)
     }
-    job.join()
 }
+
+
+//3、挂起函數
+////返回了多个值吗，是异步，一次性返回多个值
+fun  testMultipleValue() = runBlocking<Unit> {
+    multipleValue().forEach { value-> println(value) }
+}
+
+suspend fun multipleValue():List<Int>{
+    delay(1000)
+    return listOf(1,2,3,4,5,6)
+}
+
+
+
+ fun  testSimpleFlow() = runBlocking<Unit> {
+     launch {
+         //证明没阻塞
+         for (i in 1..6){
+             println("I am not blocked")
+             delay(1500)
+         }
+     }
+    simpleFlow().collect {value ->
+        println(value)
+    }
+}
+
+
+//异步返回多个值，一次返回一个值，需要用到Flow
+suspend fun simpleFlow()= flow{
+    for (i in 1..6){
+        delay(1000)
+        emit(i)//发射，产生一个元素
+    }
+}
+
 
 
 
