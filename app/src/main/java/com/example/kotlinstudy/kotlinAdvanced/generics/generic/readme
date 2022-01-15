@@ -1,0 +1,32 @@
+// 总结：
+// 如果我们只需要读取泛型数据（生成者），就可以把此泛型声明成协变（? extends T）   KT out  协变  读取
+// 如果我们只需要写入泛型数据（消费者），就可以把此泛型声明成逆变（? super T）     KT in   逆变  修改
+// PECS原则： Producer Extends Consumer Super  == 协变 与 逆变
+
+只能读取，不能修改，就是协变，就是生产者  java ? extends    kt out
+
+只能修改，不能获取，就是逆变，就是消费者  java ? super      kt in
+
+
+// TODO ========================= 同学们，下面是泛型的草稿笔记
+
+
+KT的难点是什么？
+
+lambda 高阶  高阶进阶  DSL
+
+KT泛型  很多地方 和Java是一样的， 继承了Java的泛型，然后升级
+
+
+很多同学学不会KT的泛型？ 是什么原因  是你没有把 Java的 形变搞懂
+
+
+void copyAll(List1<Object> to, List1<String> from) {
+	to = from;
+}
+
+父类 接收 子类  合理  ==  协作的变化  协变
+
+子类 接收 父类  不合理  ==  逆向      逆变
+
+Java 现在就可以过度到KT，一分钟
