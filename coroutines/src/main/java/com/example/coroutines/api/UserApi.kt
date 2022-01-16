@@ -14,6 +14,7 @@ import retrofit2.http.Query
 
  */
 data class User(var name:String="", var address:String="")
+data class Response<T>(val value: T, val isLocal:Boolean)
 
 val  userServiceApi: UserServiceApi by lazy {
     val retrofit= Retrofit.Builder()

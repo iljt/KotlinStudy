@@ -17,7 +17,7 @@ class UserViewModel:ViewModel() {
 
    private  val  userRepository=UserRepository()
 
-   fun getUser(name:String){
+    fun getUser(name:String){
       viewModelScope.launch {
          user.value= userRepository.getUser(name)
       }

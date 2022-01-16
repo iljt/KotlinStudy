@@ -13,7 +13,7 @@
 
         android:theme="@style/Theme.KotlinStudy">
         <activity
-            android:name=".activity.GloabExceptActivity"
+            android:name=".testcoroutine.channel.MultiplexAwaitActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
