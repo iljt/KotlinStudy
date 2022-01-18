@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".flowApplication.fragment.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/userIdEt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:hint="userid"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/firstNameEt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:hint="firstName"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/lastNameEt"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:hint="lastName"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/addUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="add user"
+        android:textSize="20sp"
+        />
+
+    <Button
+        android:id="@+id/deleteUserBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="delete user"
+        android:textSize="20sp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="10"
+        tools:listitem="@layout/item_user"/>
+
+</LinearLayout>

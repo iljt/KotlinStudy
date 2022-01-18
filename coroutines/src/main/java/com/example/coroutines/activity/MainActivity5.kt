@@ -22,7 +22,6 @@ class MainActivity5 : AppCompatActivity(){
     //异常的捕获
     private val exceptHandler= CoroutineExceptionHandler { _, throwable ->
         println("Caugth: $throwable")
-
     }
 
   private val userViewModel:UserViewModel by viewModels()

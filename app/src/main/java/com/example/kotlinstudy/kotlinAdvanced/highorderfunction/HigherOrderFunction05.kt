@@ -1,4 +1,4 @@
-package k02
+package com.example.kotlinstudy.kotlinAdvanced.highorderfunction
 
 // TODO 高阶函数第三版
 
@@ -62,7 +62,7 @@ fun main() {
 // (T)  {持有it == T本身}
 // (Double) {持有it == Double本身}
 
-// fun <T> T.k02.myRunOK( mm: (Float) -> Boolean ) /*: Boolean*/ = mm(656.4f) // 执行lambda
+// fun <T> T.com.example.kotlinstudy.kotlinAdvanced.highorderfunction.myRunOK( mm: (Float) -> Boolean ) /*: Boolean*/ = mm(656.4f) // 执行lambda
 
 // 我对T扩展，T本身就等于==this
 fun <T> T.myRunOK(mm: T.(Double) -> Boolean) /*: Boolean*/ = mm(664.45) // 执行lambda
@@ -73,7 +73,7 @@ fun <T> T.myRunOK(mm: T.(Double) -> Boolean) /*: Boolean*/ = mm(664.45) // 执�
 
 // 给整个项目用，来一个扩展函数 默认：public static
 // 想给所有类型用， String Char Boolean ... 泛型
-// fun <T> T.k02.myRunOK( mm: T.() -> Boolean ) /*: Boolean*/ = mm() // 执行lambda
+// fun <T> T.com.example.kotlinstudy.kotlinAdvanced.highorderfunction.myRunOK( mm: T.() -> Boolean ) /*: Boolean*/ = mm() // 执行lambda
 
 // 你对xxx扩展  this==xxx本身
 // 你对函数扩展，持有函数本身，其实是没有错误的，但是更准确来说，this持有函数的返回类型

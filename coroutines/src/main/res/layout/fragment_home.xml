@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    tools:context=".flowApplication.fragment.HomeFragment">
+
+
+    <Button
+        android:id="@+id/flowDownFileBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="flow下载文件"
+        android:textSize="20sp"
+        />
+
+
+    <Button
+        android:id="@+id/flowAndRoomBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="flow与room的应用"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+
+    <Button
+        android:id="@+id/flowAndRetrofitBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="flow与Retrofit"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/stateFlowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="STATEFLOW"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+
+    <Button
+        android:id="@+id/sharedFlowBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="sharedFlow"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        />
+</LinearLayout>
