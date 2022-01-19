@@ -31,6 +31,10 @@ class HomeFragment : Fragment() {
             flowAndRetrofitBtn.setOnClickListener{
                 findNavController().navigate(R.id.action_homeFragment_to_detailFragment)
             }
+            stateFlowBtn.setOnClickListener{
+                findNavController().navigate(R.id.action_homeFragment_to_numberFragment)
+            }
+
         }
 
     }
