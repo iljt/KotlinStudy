@@ -2,6 +2,7 @@ package com.example.coroutines.flowApplication.net
 
 import android.util.Log
 import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
@@ -13,16 +14,21 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 object RetrofitClient {
 
    private val instance:Retrofit by lazy {
+      val interceptor = HttpLoggingInterceptor{
+          Log.e("okhttp: ",it)
+      }
+       interceptor.level=HttpLoggingInterceptor.Level.BODY
        Retrofit.Builder()
-           .client(OkHttpClient().newBuilder().addInterceptor {
-               it.proceed(it.request()).apply {
-                   Log.e("okhttp: ","request:${code()}")
-               }
-           }.build())
+           .client(OkHttpClient().newBuilder().addInterceptor (interceptor)
+           .build())
            .baseUrl("http://192.168.1.4/kotlinstudyserver/")
            .addConverterFactory(MoshiConverterFactory.create())
            .build()
    }
+
+    fun <T> createApi(clazz:Class<T>) :T{
+       return instance.create(clazz) as T
+    }
 
     val articleApi:ArticleApi by lazy{
         instance.create(ArticleApi::class.java)

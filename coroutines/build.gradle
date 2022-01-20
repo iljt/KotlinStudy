@@ -79,5 +79,8 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     //swiperefreshlayout
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
-
+    //paging3
+    implementation "androidx.paging:paging-runtime:3.3.0-alpha03"
+    //picasso
+    implementation "androidx.squareup.picasso:picasso:2.71828"
 }

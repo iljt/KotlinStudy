@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_homeFragment_to_numberFragment"
             app:destination="@id/numberFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_sharedFlowFragment"
+            app:destination="@id/sharedFlowFragment" />
     </fragment>
     <fragment
         android:id="@+id/downLoadFragment"
@@ -42,4 +45,8 @@
         android:name="com.example.coroutines.flowApplication.fragment.NumberFragment"
         android:label="fragment_number"
         tools:layout="@layout/fragment_number" />
+    <fragment
+        android:id="@+id/sharedFlowFragment"
+        android:name="com.example.coroutines.flowApplication.fragment.SharedFlowFragment"
+        android:label="SharedFlowFragment" />
 </navigation>

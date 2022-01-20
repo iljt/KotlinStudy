@@ -34,7 +34,9 @@ class HomeFragment : Fragment() {
             stateFlowBtn.setOnClickListener{
                 findNavController().navigate(R.id.action_homeFragment_to_numberFragment)
             }
-
+            sharedFlowBtn.setOnClickListener{
+                findNavController().navigate(R.id.action_homeFragment_to_sharedFlowFragment)
+            }
         }
 
     }
