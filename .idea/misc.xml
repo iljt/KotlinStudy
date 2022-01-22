@@ -8,6 +8,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/workspace/KotlinStudy/app/src/main/res/layout/activity_main4.xml" value="0.15052083333333333" />
+        <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_empty.xml" value="0.15896739130434784" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_flow_application.xml" value="0.10182370820668693" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_global_except.xml" value="0.15534420289855072" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_main.xml" value="0.176" />
@@ -16,6 +17,7 @@
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_main4.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_main5.xml" value="0.1671195652173913" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_main_multiplex_await.xml" value="0.17074275362318841" />
+        <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/activity_move_list.xml" value="0.176" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_detail.xml" value="0.10729166666666666" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_download.xml" value="0.16304347826086957" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_home.xml" value="0.128" />
@@ -23,6 +25,7 @@
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_shared_flow.xml" value="0.146875" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_text.xml" value="0.146875" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_user.xml" value="0.1490036231884058" />
+        <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/item_rss_subscribe.xml" value="0.15896739130434784" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/item_user.xml" value="0.15" />
       </map>
     </option>

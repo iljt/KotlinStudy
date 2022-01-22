@@ -1,4 +1,4 @@
-package com.example.coroutines.flowApplication.net
+package com.example.coroutines.paging3.net
 
 import android.util.Log
 import okhttp3.OkHttpClient
@@ -30,7 +30,5 @@ object RetrofitClient {
        return instance.create(clazz) as T
     }
 
-    val articleApi:ArticleApi by lazy{
-        instance.create(ArticleApi::class.java)
-    }
+
 }
