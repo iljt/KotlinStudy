@@ -27,6 +27,8 @@
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/fragment_user.xml" value="0.1490036231884058" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/item_rss_subscribe.xml" value="0.15896739130434784" />
         <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/item_user.xml" value="0.15" />
+        <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/recycleview_item_loadmore.xml" value="0.176" />
+        <entry key="..\:/workspace/KotlinStudy/coroutines/src/main/res/layout/subscribe_rss_item.xml" value="0.16510416666666666" />
       </map>
     </option>
   </component>

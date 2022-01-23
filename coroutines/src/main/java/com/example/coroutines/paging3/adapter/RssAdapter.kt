@@ -16,17 +16,8 @@ import com.example.coroutines.paging3.entity.Record
  * Created  by Administrator on 2022/1/22 23:38
 
  */
-class RssAdapter(private val context: Context) : PagingDataAdapter<Record, BindingViewHolder>(object :
-    DiffUtil.ItemCallback<Record>() {
-
-    override fun areItemsTheSame(oldItem: Record, newItem: Record): Boolean {
-        return oldItem.rssId == newItem.rssId
-    }
-
-    override fun areContentsTheSame(oldItem: Record, newItem: Record): Boolean {
-        return oldItem == newItem
-    }
-}) {
+class RssAdapter(private val context: Context) : PagingDataAdapter<Record, BindingViewHolder>(RecordDiffCallBacl())
+    {
     override fun onBindViewHolder(holder: BindingViewHolder, position: Int) {
        var record=getItem(position)
         record?.let {
@@ -45,5 +36,17 @@ class RssAdapter(private val context: Context) : PagingDataAdapter<Record, Bindi
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BindingViewHolder {
         val binding=SubscribeRssItemBinding.inflate(LayoutInflater.from(context),parent,false)
         return  BindingViewHolder(binding)
+    }
+
+
+    private class RecordDiffCallBacl: DiffUtil.ItemCallback<Record>() {
+
+        override fun areItemsTheSame(oldItem: Record, newItem: Record): Boolean {
+            return oldItem.rssId == newItem.rssId
+        }
+
+        override fun areContentsTheSame(oldItem: Record, newItem: Record): Boolean {
+            return oldItem == newItem
+        }
     }
 }

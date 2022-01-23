@@ -1,7 +1,4 @@
 package com.example.coroutines.paging3.entity
-
-import com.google.gson.annotations.SerializedName
-
 /**
 
  * Created  by Administrator on 2022/1/22 22:53
@@ -12,13 +9,9 @@ import com.google.gson.annotations.SerializedName
 )*/
 
 data class RssData(
-    @SerializedName("current")
     val current: Int,
-    @SerializedName("records")
     val records: List<Record>,
-    @SerializedName("size")
     val size: Int,
-    @SerializedName("total")
     val total: Int
 )
 

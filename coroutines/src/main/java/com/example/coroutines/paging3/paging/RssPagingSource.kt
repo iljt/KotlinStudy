@@ -5,6 +5,7 @@ import com.example.coroutines.paging3.api.RssApi
 import com.example.coroutines.paging3.entity.Record
 import com.example.coroutines.paging3.entity.RequestRssDataBean
 import com.example.coroutines.paging3.net.RetrofitClient
+import kotlinx.coroutines.delay
 
 /**
 
@@ -14,10 +15,12 @@ import com.example.coroutines.paging3.net.RetrofitClient
 class RssPagingSource: PagingSource<Int, Record>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Record> {
+        delay(1000)
         val size=params.loadSize
         var current=params.key ?: 1
         val requestRssDataBean=RequestRssDataBean(size,current)
         val rssData= RetrofitClient.createApi(RssApi::class.java).queryRssList(requestRssDataBean)
+
         /*if (rssData.isSuccess()){
 
         }*/
@@ -25,8 +28,18 @@ class RssPagingSource: PagingSource<Int, Record>() {
         var prevkey:Int? = null
         var nextkey:Int? = null
 
-        prevkey = if(current ==1) null else current - 1
-        nextkey = if ( rssData?.data?.total > rssData?.data?.current*rssData?.data?.size) current+1 else null
+        val realPageSize = size
+        val initialLoadSize =20
+        if(current==1){
+            prevkey = null
+            nextkey = initialLoadSize / realPageSize + 1
+        }else{
+            prevkey = current - 1
+            nextkey = if ( rssData?.data?.total > rssData?.data?.current*rssData?.data?.size) current+1 else null
+        }
+
+      //  prevkey = if(current ==1) null else current - 1
+        //nextkey = if ( rssData?.data?.total > rssData?.data?.current*rssData?.data?.size) current+1 else null
 
         return  try{
             LoadResult.Page(
