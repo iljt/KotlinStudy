@@ -22,7 +22,6 @@ class RssPagingSource: PagingSource<Int, Record>() {
         val rssData= RetrofitClient.createApi(RssApi::class.java).queryRssList(requestRssDataBean)
 
         /*if (rssData.isSuccess()){
-
         }*/
 
         var prevkey:Int? = null
