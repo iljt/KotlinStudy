@@ -27,7 +27,7 @@ class Dog {
 // 非常欠打的invoke  只能是 Person 与 Person的子类
 fun <T : Person> myInvoke1(item : T) = println(item) // 会自动调用 toString函数
 fun <T : () -> Unit > myInvoke2(item : T) = item.invoke()
-fun <T : (String) -> Unit > myInvoke3(item : T) = item.invoke("Derry")
+fun <T : (String) -> Unit > myInvoke3(item : T) = item.invoke("cbd")
 fun <T> myInvoke4(item : T) where T : () -> Unit, T : (String) -> Unit { item.invoke() ; item.invoke("DDD") }
 
 fun main() {

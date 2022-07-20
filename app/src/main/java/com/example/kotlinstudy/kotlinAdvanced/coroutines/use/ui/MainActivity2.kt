@@ -16,7 +16,7 @@ class MainActivity2 : AppCompatActivity() {
 
     val main = MainScope()
 
-    private val TAG = "Derry"
+    private val TAG = "cbd"
     var mProgressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,7 +38,7 @@ class MainActivity2 : AppCompatActivity() {
             val result =
 
                 APIClient.instance.instanceRetrofit(WanAndroidAPI::class.java)
-                .loginActionCoroutine("Derry-vip", "123456") // 1.挂起出去执行异步操作  2.操作完成后恢复主线程
+                .loginActionCoroutine("vip", "123456") // 1.挂起出去执行异步操作  2.操作完成后恢复主线程
 
             // 更新UI 因为这个括号里面是主线程，当然可以更新UI
             Log.d(TAG, "errorMsg: ${result.data}")

@@ -81,7 +81,7 @@ private suspend fun requestLoadUserAssetsDetails() : String {
 }
 
 class MainActivity8 : AppCompatActivity() {
-    private val TAG = "Derry"
+    private val TAG = "cbd"
     var mProgressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {

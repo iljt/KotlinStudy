@@ -25,7 +25,7 @@ class MainActivity5 : AppCompatActivity() {
 
         binding.vm = viewModel
 
-        bt.setOnClickListener { viewModel.requestLogin("Derry-vip", "123456") }
+        bt.setOnClickListener { viewModel.requestLogin("vip", "123456") }
     }
 
 }

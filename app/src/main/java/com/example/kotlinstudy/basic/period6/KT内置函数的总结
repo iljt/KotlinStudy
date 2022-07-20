@@ -33,7 +33,7 @@ Todo =================================   apply 与 also 是一个类别的 属�
 val info本身 = info.apply {
     this == info本身
     ...
-    "Derry"
+    "cbd"
 }.apply {
 }.apply {
 }

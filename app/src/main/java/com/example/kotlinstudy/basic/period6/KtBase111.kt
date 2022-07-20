@@ -89,7 +89,7 @@ class GetClass<out T>(_item: T) {
 fun main() {
     // 逆变 in T  SetClass 只能修改 更改 不能给外界读取
     val p1 = SetClass<String>()
-    p1.set1("Derry")
+    p1.set1("cbd")
     p1.set2("Kevin")
 
     println()

@@ -19,5 +19,5 @@ fun main() {
     // KT 端
     MyObject.TARGET
 
-    MyObject.showAction("Derry")
+    MyObject.showAction("cbd")
 }

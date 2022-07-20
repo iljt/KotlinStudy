@@ -74,7 +74,7 @@ class StudentSetGets<INPUT_OUTPU> {
 
 fun main() {
     // 生产者 协变  ? extends T  或者 out T
-    val stu = MyStudentGet("Derry is OK")
+    val stu = MyStudentGet("cbd is OK")
     println(stu.get())
 
     // 消费者 逆变 ? super T 或者 in T

@@ -61,14 +61,14 @@ fun main() {
 
     println()
 
-    show("Derry")
+    show("cbd")
     show("Kevin")
     show("OK")
     show(null)
 
     println()
 
-    show2("Derry")
+    show2("cbd")
     show2("Kevin")
     show2("OK")
     show2(null)

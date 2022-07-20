@@ -14,7 +14,7 @@ interface WanAndroidAPI {
 
     /** https://www.wanandroid.com/blog/show/2
      * 登录API
-     * username=Derry-vip&password=123456
+     * username=vip&password=123456
      */
     @POST("/user/login")
     @FormUrlEncoded
@@ -42,7 +42,7 @@ interface WanAndroidAPI {
 
     /** https://www.wanandroid.com/blog/show/2
      * 登录API
-     * username=Derry-vip&password=123456
+     * username=vip&password=123456
      */
     @POST("/user/login")
     @FormUrlEncoded

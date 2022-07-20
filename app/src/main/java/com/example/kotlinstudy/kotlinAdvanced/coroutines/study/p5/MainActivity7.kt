@@ -1,4 +1,4 @@
-package com.example.kotlinstudy.kotlinAdvanced.coroutines.study.p5
+     package com.example.kotlinstudy.kotlinAdvanced.coroutines.study.p5
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -79,7 +79,7 @@ class MainActivity7 : AppCompatActivity() {
 }
 
 // suspend 修饰的函数
-// ↓ 切换 ↑ ，suspend起到提醒的作用，经此而已
+// ↓ 切换 ↑ ，suspend起到提醒的作用，仅此而已
 suspend fun noSuspendFriendList(user: String): String{
     // 函数体跟普通函数一样
     return "xxx"

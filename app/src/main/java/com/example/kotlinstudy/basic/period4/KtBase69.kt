@@ -22,6 +22,6 @@ fun main() {
     val n=map.getOrPut("xs"){9999}
     println(n)
     // 3.getOrPut 有的情况
-    val r2 = map.getOrPut("ddd") {666} // 发现Derry的key是有的，那么就直接获取出来， 相当于666备用值就失效了
+    val r2 = map.getOrPut("ddd") {666} // 发现cbd的key是有的，那么就直接获取出来， 相当于666备用值就失效了
     println(r2)
 }

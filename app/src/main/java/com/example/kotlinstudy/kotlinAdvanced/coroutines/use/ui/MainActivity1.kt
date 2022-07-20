@@ -30,7 +30,7 @@ class MainActivity1 : AppCompatActivity() {
         false
     }
 
-    private val TAG = "Derry"
+    private val TAG = "cbd"
     var mProgressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,7 +53,7 @@ class MainActivity1 : AppCompatActivity() {
 
                 val loginResult =
                     APIClient.instance.instanceRetrofit(WanAndroidAPI::class.java)
-                    .loginAction("Derry-vip", "123456")
+                    .loginAction("vip", "123456")
 
                 val result : LoginRegisterResponseWrapper2<LoginRegisterResponse2>? = loginResult.execute().body()
 

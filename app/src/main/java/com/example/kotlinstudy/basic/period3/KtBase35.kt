@@ -14,6 +14,6 @@ fun main() {
     // TODO 第二种情况：声明时指定为可空类型
     var name2: String ?
     name2 = null
-    // name2 = "Derry"
+    // name2 = "cbd"
     println(name2)
 }

@@ -2,7 +2,7 @@ package com.example.kotlinstudy.kotlinAdvanced.highorderfunction
 
 // TODO 高阶函数第三版
 
-const val nameS : String = "Derry"
+const val nameS : String = "cbd"
 const val ageS : Int = 99
 fun commonOK() = /*println("我是通用函数")*/ 88
 // 省略一万个类型
@@ -30,12 +30,12 @@ fun main() {
         true
     }
 
-    "derry".run {
-        length // 已经等到derry字符串长度了
+    "cbd".run {
+        length // 已经等到cbd字符串长度了
     }
 
-    "derry".let {
-        it.length // 已经等到derry字符串长度了
+    "cbd".let {
+        it.length // 已经等到cbd字符串长度了
     }
 
 

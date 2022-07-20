@@ -11,12 +11,12 @@ package com.example.kotlinstudy.kotlinAdvanced.coroutines.use2.entity
             "email": "",
             "icon": "",
             "id": 66720,
-            "nickname": "Derry-vip",
+            "nickname": "vip",
             "password": "",
-            "publicName": "Derry-vip",
+            "publicName": "vip",
             "token": "",
             "type": 0,
-            "username": "Derry-vip"
+            "username": "vip"
         },
         "errorCode": 0,
         "errorMsg": ""

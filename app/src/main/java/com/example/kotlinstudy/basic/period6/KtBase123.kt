@@ -32,7 +32,7 @@ fun main() {
     // 2.定义整个lambda规则标准，输出 我们会始终返回Context本身，所以你可以链式调用
     // 然后main函数就可以根据DSL编程方式标准规则，来写具体的实现，这就是DSL编程范式
     val context : Context = Context().apply5 {
-        // it == String == "我就是Derry"
+        // it == String == "我就是cbd"
         println("我的it是:$it，我的this是:$this")
         toast("success")
         toast(it)

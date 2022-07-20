@@ -22,10 +22,10 @@ private suspend fun requestLoadUser() : String {
         delay(3000L)  // 模拟请求服务器 所造成的耗时
     }
 
-    if (isLoadSuccess) {
-        return "加载到[用户数据]信息集"
+    return if (isLoadSuccess) {
+        "加载到[用户数据]信息集"
     } else {
-        return "加载[用户数据],加载失败,服务器宕机了"
+        "加载[用户数据],加载失败,服务器宕机了"
     }
 }
 
@@ -39,10 +39,10 @@ private suspend fun requestLoadUserAssets(): String {
     withContext(Dispatchers.IO) {
         delay(3000L) // 模拟请求服务器 所造成的耗时
     }
-    if (isLoadSuccess) {
-        return "加载到[用户资产数据]信息集"
+    return if (isLoadSuccess) {
+        "加载到[用户资产数据]信息集"
     } else {
-        return "加载[用户资产数据],加载失败,服务器宕机了"
+        "加载[用户资产数据],加载失败,服务器宕机了"
     }
 }
 
@@ -57,17 +57,17 @@ private suspend fun requestLoadUserAssetsDetails() : String {
         delay(3000L) // 模拟请求服务器 所造成的耗时
     }
 
-    if (isLoadSuccess) {
-        return "加载到[用户资产详情数据]信息集"
+    return if (isLoadSuccess) {
+        "加载到[用户资产详情数据]信息集"
     } else {
-        return "加载[用户资产详情数据],加载失败,服务器宕机了"
+        "加载[用户资产详情数据],加载失败,服务器宕机了"
     }
 }
 
 // 2.4：协程方式解决三层回调带来的痛点
 class MainActivity4 : AppCompatActivity() {
 
-    private val TAG = "Derry"
+    private val TAG = "cbd"
     var mProgressDialog: ProgressDialog? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
