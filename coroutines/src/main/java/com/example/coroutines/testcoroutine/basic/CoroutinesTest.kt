@@ -10,12 +10,12 @@ import kotlin.system.measureTimeMillis
  */
 
 fun main() {
-   // testcoroutinesbuilder()
+    testcoroutinesbuilder()
    // testcoroutinesjoin()
    // testcoroutinesawait()
    // testsync()
     //testasync()
-    teststartmode()
+  //  teststartmode()
 }
 
 /**
